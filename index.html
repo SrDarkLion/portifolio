@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Portifólio | Davi Quinino</title>
+    <link rel="shortcut icon" href="img/coffee.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a class="menu-link" href="#inicio">Início</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#contatos">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img/davi.png" alt="Davi Quinino" class="foto-perfil">
+        <h1>Davi Quinino</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Backend</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-container">
+            <p class="sobre-paragrafo">
+                Olá, sou Davi, designer gráfico e desenvolvedor de software. Tenho experiência em C#, .NET, JavaScript,
+                Node.js, MongoDB e PostgreSQL, criando soluções visuais e sistemas eficientes. Busco sempre aprimorar
+                minhas habilidades para desenvolver projetos inovadores e funcionais.
+            </p>
+        </div>
+
+        <section class="projetos" id="projetos">
+            <h2 class="projetos-titulo">Meus Projetos</h2>
+            <div class="projetos-container">
+
+                <div class="projetos-card">
+                    <a href="https://github.com/daviquinino/CollectiveComments" target="_blank">
+                        <img src="img/projetos/CollectiveComments/banner.png" alt="Projeto 1" class="projetos-imagem">
+                        <div class="caixa-projetos-info">
+                            <h3 class="info-projetos">Collective Comments</h3>
+                            <p class="paragrafo-projetos">O CollectiveComments é um sistema desenvolvido para facilitar
+                                o
+                                gerenciamento de feedbacks de
+                                empresas. Ele permite que organizações coletem, organizem e analisem os comentários de
+                                clientes,
+                                colaboradores ou parceiros de forma eficiente.</p>
+                    </a>
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contatos</h2>
+        <form class="formulario-contatos" id="formulario">
+            <div class="form-container">
+                <input placeholder="Nome*" class="campo-form" id="nome" required>
+            </div>
+            <div class="form-container">
+                <textarea placeholder="Digite sua Mensagem*" class="campo-form" rows="5" id="mensagem"
+                    required></textarea>
+            </div>
+
+            <a href="mailto:daviquininooficial@gmail.com" class="botao-form">
+                Enviar E-mail
+            </a>
+            
+        </form>
+    </section>
+
+    <footer class="rodape">
+        <p class="rodape-texto">&copy; Davi Quinino 2025</p>
+    </footer>
+</body>
+
+</html>

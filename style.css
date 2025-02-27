@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    text-decoration: none;
+    color: #fafafa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #3c2cd0;
+    --secundaria: #ab86f5;
+    --escura: #0f172a;
+    --maisEscura: #0a0f1c;
+    --clara: #fafafa;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--escura);
+    color: var(--clara);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link {
+    color: var(--clara);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    animation: fly 5s infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+}
+
+.cabecalho-sub-titulo {
+    font-size: 2rem;
+    color: var(--clara);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--clara);
+    text-align: center;
+}
+
+.sobre-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.projetos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projetos-imagem {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.caixa-projetos-info {
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    ;
+}
+
+.info-projetos {
+    margin-bottom: 5px;
+}
+
+.paragrafo-projetos {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+.contatos {
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contatos {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.form-container {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--clara);
+    border: 1px solid var(--vidro);
+    outline: none;
+}
+
+.campo-form:focus {
+    border: 1px solid var(--primaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.botao-form {
+    display: block;
+    text-align: center;
+    color: var(--clara);
+    background-color: var(--primaria);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-3px);
+    background-color: var(--secundaria);
+    box-shadow: 0 5 15px rgba(79, 70, 229, 0.4);
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rodape {
+    background-color: var(--maisEscura);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
