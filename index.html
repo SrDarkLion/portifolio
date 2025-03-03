@@ -32,6 +32,12 @@
         <h1>Davi Quinino</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Backend</p>
     </main>
+    <div class="botao-cv" onclick="baixarCurriculo()">
+        <a href="cv/curriculo.pdf" target="_blank" class="botao-cv-link">
+            
+            Baixar Currículo
+        </a>
+    </div>
 
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre Mim</h2>
@@ -81,13 +87,24 @@
             <a href="mailto:daviquininooficial@gmail.com" class="botao-form">
                 Enviar E-mail
             </a>
-            
+
         </form>
     </section>
 
     <footer class="rodape">
         <p class="rodape-texto">&copy; Davi Quinino 2025</p>
     </footer>
+
+    <script>
+        function baixarCurriculo() {
+            const link = document.createElement("a");
+            link.href = "cv/curriculo.pdf";  // Substitua pelo caminho do seu arquivo
+            link.download = "curriculo.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 
 </html>
