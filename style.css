@@ -297,3 +297,85 @@ h1 {
     transition: all 0.5s ease;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .foto-perfil {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .sobre-container {
+        margin-top: 20px;
+        max-width: 700px;
+        border-radius: 16px;
+        backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .sobre-paragrafo {
+        font-size: 1.2rem;
+    }
+    
+    .projetos {
+        backdrop-filter: none;
+    }
+    .paragrafo-projetos {
+        font-size: 1.1rem;
+        margin-left: 1px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .foto-perfil {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .projetos-container {
+        grid-template-columns: 1fr;
+        backdrop-filter: none;
+    }
+    .projetos-card {
+        width: 100%;
+    }
+    .info-projetos {
+        font-size: 1.5rem;
+        border: none;
+    }
+    .paragrafo-projetos {
+        display: none;
+    }
+
+    .formulario-contatos {
+        padding: 1rem;
+    }
+
+    .botao-cv {
+        padding: 0.8rem 1.5rem;
+        font-size: 16px;
+    }
+}
