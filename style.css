@@ -65,11 +65,13 @@ body {
 }
 
 .cabecalho {
-    min-height: 100vh;
+    min-height: 200vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 900px;
+    margin: auto;
 }
 
 .foto-perfil {
@@ -79,6 +81,7 @@ body {
     border: 4px solid var(--vidro);
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     animation: fly 5s infinite;
+    margin-top: 80px;
 }
 
 h1 {
@@ -117,61 +120,37 @@ h1 {
     font-size: 1.2rem;
 }
 
-.projetos {
-    padding: 6rem 2rem;
-}
-
 .projetos-titulo {
+    font-size: 3rem;
+    color: var(--clara);
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
 }
 
-
-.projetos-container {
+.project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.projetos-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--vidro);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-    transition: all 0.5s ease;
-    cursor: pointer;
+.project-card {
+    margin-top: 20px;
+    background: var(--maisEscura);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--vidro);
 }
 
-.projetos-card:hover {
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-    transform: translateY(-10px) scale(1.03);
+.project-card:hover {
+    transform: scale(1.05);
 }
 
-.projetos-imagem {
-    height: 300px;
+.project-img {
     width: 100%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
-
-.caixa-projetos-info {
-    padding-left: 1.5rem;
-    padding-bottom: 0.5rem;
-    ;
-}
-
-.info-projetos {
-    margin-bottom: 5px;
-}
-
-.paragrafo-projetos {
-    color: rgba(226, 232, 240, 0.8);
-    line-height: 1.25rem;
-}
-
 .contatos {
     padding: 6rem 2rem;
 }
@@ -184,6 +163,7 @@ h1 {
 
 .formulario-contatos {
     max-width: 600px;
+    min-width: 600px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
@@ -250,6 +230,7 @@ h1 {
 
 
 .botao-cv {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,6 +277,16 @@ h1 {
     fill: var(--clara);
     transition: all 0.5s ease;
     cursor: pointer;
+}
+
+
+.contatos-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
