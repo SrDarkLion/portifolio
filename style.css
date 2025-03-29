@@ -132,6 +132,7 @@ h1 {
     gap: 20px;
 }
 
+
 .project-card {
     margin-top: 20px;
     background: var(--maisEscura);
@@ -139,6 +140,14 @@ h1 {
     border-radius: 10px;
     transition: 0.3s;
     box-shadow: 0 0 10px var(--vidro);
+}
+
+.project-card:nth-child(3) {
+    grid-row: 2;
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+    max-width: 50%;
 }
 
 .project-card:hover {
@@ -151,6 +160,7 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
 }
+
 .contatos {
     padding: 6rem 2rem;
 }
@@ -322,13 +332,15 @@ h1 {
         backdrop-filter: none;
         background: rgba(255, 255, 255, 0.05);
     }
+
     .sobre-paragrafo {
         font-size: 1.2rem;
     }
-    
+
     .projetos {
         backdrop-filter: none;
     }
+
     .paragrafo-projetos {
         font-size: 1.1rem;
         margin-left: 1px;
@@ -350,13 +362,16 @@ h1 {
         grid-template-columns: 1fr;
         backdrop-filter: none;
     }
+
     .projetos-card {
         width: 100%;
     }
+
     .info-projetos {
         font-size: 1.5rem;
         border: none;
     }
+
     .paragrafo-projetos {
         display: none;
     }
