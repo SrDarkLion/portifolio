@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <title>Meu Portifólio | Davi Quinino</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -11,6 +11,11 @@
 
 <body>
     <nav class="navegacao">
+        <button class="menu-burguer" aria-label="Abrir menu">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </button>
         <ul class="menu">
             <li>
                 <a class="menu-link" href="#inicio">Início</a>
@@ -28,11 +33,20 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <img src="img/davi.png" alt="Davi Quinino" class="foto-perfil">
+        <div class="flip-container">
+            <div class="flip-card">
+                <div class="flip-card-frente">
+                    <img src="https://github.com/SrDarkLion.png" alt="Davi Quinino" class="foto-perfil">
+                </div>
+                <div class="flip-card-verso">
+                    <img src="img/davi.png" alt="Davi Quinino" class="foto-perfil">
+                </div>
+            </div>
+        </div>
         <h1>Davi Quinino</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor & Designer</p>
-        <div class="botao-cv" onclick="baixarCurriculo()">
-            <a href="cv/curriculo.pdf" target="_blank" class="botao-cv-link">
+        <div class="botao-cv">
+            <a href="https://drive.google.com/file/d/12DHXU9PHUsnApORFy0Jzc0iSH0bsfQjl/view?usp=sharing" target="_blank" class="botao-cv-link">
                 Baixar Currículo
             </a>
         </div>
@@ -41,8 +55,7 @@
             <h2 class="sobre-titulo">Sobre Mim</h2>
             <div class="sobre-container">
                 <p class="sobre-paragrafo">
-                    Tenho experiência em C#, .NET, JavaScript, HTML, CSS, Node.js, MongoDB e PostgreSQL, sem contar as
-                    habilidades em design que são Figma, Canva e Blender, criando soluções visuais e sistemas
+                    Tenho experiência em C#, .NET, JavaScript, HTML, CSS, Node.js, MongoDB, PostgreSQL, Figma, Canva e Blender, criando soluções visuais e sistemas
                     eficientes. Busco sempre aprimorar minhas habilidades para desenvolver projetos inovadores e
                     funcionais.
                 </p>
@@ -115,16 +128,7 @@
         <p class="rodape-texto">&copy; Davi Quinino 2025</p>
     </footer>
 
-    <script>
-        function baixarCurriculo() {
-            const link = document.createElement("a");
-            link.href = "cv/curriculo.pdf";
-            link.download = "curriculo.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
