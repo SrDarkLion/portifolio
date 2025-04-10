@@ -23,3 +23,11 @@ const flipCard = document.querySelector('.flip-card');
 flipContainer.addEventListener('click', () => {
     flipCard.classList.toggle('virar');
 });
+
+const knight = document.querySelector('.knight');
+
+knight.addEventListener('click', () => {
+  const audio = document.querySelector('.audio');
+  audio.volume = 0.2;
+  audio.play();
+});
