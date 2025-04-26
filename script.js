@@ -1,33 +1,86 @@
-const menuBurguer = document.querySelector(".menu-burguer");
-const menu = document.querySelector(".menu");
-const links = document.querySelectorAll(".menu-link");
-const body = document.body;
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.menu-burguer');
+    const menu = document.querySelector('.menu');
+    const knight = document.querySelector('.knight');
+    const audio = document.querySelector('.audio');
 
-menuBurguer.addEventListener("click", () => {
-  menuBurguer.classList.toggle("ativo");
-  menu.classList.toggle("ativo");
-  body.classList.toggle("scroll-block");
-});
+    // Menu toggle with accessibility
+    menuButton.addEventListener('click', toggleMenu);
+    
+    // Handle keyboard navigation
+    menuButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
 
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    menuBurguer.classList.remove("ativo");
-    menu.classList.remove("ativo");
-    body.classList.remove("scroll-block");
-  });
-});
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !menuButton.contains(e.target)) {
+            closeMenu();
+        }
+    });
 
-const flipContainer = document.querySelector('.flip-container');
-const flipCard = document.querySelector('.flip-card');
+    function toggleMenu() {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('menu-active');
+        
+        if (!isExpanded) {
+            // Focus the first menu item when opening
+            const firstMenuItem = menu.querySelector('a');
+            if (firstMenuItem) setTimeout(() => firstMenuItem.focus(), 100);
+        }
+    }
 
-flipContainer.addEventListener('click', () => {
-    flipCard.classList.toggle('virar');
-});
+    function closeMenu() {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('menu-active');
+    }
 
-const knight = document.querySelector('.knight');
+    // Add keyboard navigation within menu
+    menu.addEventListener('keydown', (e) => {
+        const menuItems = [...menu.querySelectorAll('a')];
+        const currentIndex = menuItems.indexOf(document.activeElement);
 
-knight.addEventListener('click', () => {
-  const audio = document.querySelector('.audio');
-  audio.volume = 0.2;
-  audio.play();
+        switch(e.key) {
+            case 'ArrowDown':
+            case 'ArrowRight':
+                e.preventDefault();
+                const nextIndex = (currentIndex + 1) % menuItems.length;
+                menuItems[nextIndex].focus();
+                break;
+            case 'ArrowUp':
+            case 'ArrowLeft':
+                e.preventDefault();
+                const prevIndex = currentIndex <= 0 ? menuItems.length - 1 : currentIndex - 1;
+                menuItems[prevIndex].focus();
+                break;
+            case 'Escape':
+                e.preventDefault();
+                closeMenu();
+                menuButton.focus();
+                break;
+        }
+    });
+
+    // Easter egg with accessibility
+    knight.addEventListener('click', () => {
+        audio.currentTime = 0;
+        audio.play().catch(console.error);
+    });
+    
+    knight.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            audio.currentTime = 0;
+            audio.play().catch(console.error);
+        }
+    });
+
+    // Make knight interactive
+    knight.setAttribute('role', 'button');
+    knight.setAttribute('tabindex', '0');
+    knight.setAttribute('aria-label', 'Tocar som especial');
 });
