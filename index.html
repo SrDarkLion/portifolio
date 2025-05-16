@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Meu Portifólio | Davi Quinino</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
 </head>
 
 <body>
@@ -56,7 +57,12 @@
             <h2 class="sobre-titulo">Sobre Mim</h2>
             <div class="sobre-container">
                 <p class="sobre-paragrafo">
-                    Desenvolvedor que une criatividade e técnica para transformar ideias em soluções funcionais e eficientes. Tenho experiência tanto no desenvolvimento de interfaces quanto na construção de sistemas robustos, sempre alinhando requisitos técnicos às necessidades do projeto. Trabalho com tecnologias como C#, .NET, JavaScript, Node.js, MongoDB e PostgreSQL, aplicando boas práticas para entregar resultados de qualidade. Estou sempre em busca de aprendizado contínuo e novos desafios para crescer e contribuir de forma positiva em qualquer projeto.
+                    Desenvolvedor que une criatividade e técnica para transformar ideias em soluções funcionais e
+                    eficientes. Tenho experiência tanto no desenvolvimento de interfaces quanto na construção de
+                    sistemas robustos, sempre alinhando requisitos técnicos às necessidades do projeto. Trabalho com
+                    tecnologias como C#, .NET, JavaScript, Node.js, MongoDB e PostgreSQL, aplicando boas práticas para
+                    entregar resultados de qualidade. Estou sempre em busca de aprendizado contínuo e novos desafios
+                    para crescer e contribuir de forma positiva em qualquer projeto.
                 </p>
             </div>
         </section>
@@ -115,8 +121,7 @@
                         GitHub
                     </a>
 
-                    <a href="gpgkey.txt" target="_blank" class="rede-social"
-                        aria-label="Chave GPG">
+                    <a href="gpgkey.txt" target="_blank" class="rede-social" aria-label="Chave GPG">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                             <path
@@ -142,6 +147,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        var sheep = new eSheep();
+        sheep.Start(); 
+    </script>
 </body>
 
 </html>
