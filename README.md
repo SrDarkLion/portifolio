@@ -45,7 +45,6 @@ Bem-vindo ao meu portfólio pessoal! Este site foi criado para mostrar meus proj
 
 - [Collective Comments](https://github.com/SrDarkLion/CollectiveComments)
 - [Bookeeper](https://book-eeper.netlify.app/)
-- [Sodar Fruit](https://sodarfruit.netlify.app)
 
 ## 📫 Contato
 
