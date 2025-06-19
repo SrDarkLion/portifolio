@@ -1,7 +1,3 @@
-/* =========================
-   RESET E CONFIGURAÇÕES BASE
-   ========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -28,10 +24,6 @@ body {
   background-color: var(--escura);
   color: var(--clara);
 }
-
-/* =========================
-   NAVEGAÇÃO
-   ========================= */
 
 .navegacao {
   position: fixed;
@@ -75,7 +67,6 @@ body {
 
 .menu-link:hover {
   color: var(--secundaria);
-  font-weight: bold;
 }
 
 .menu-burguer {
@@ -100,10 +91,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* =========================
-   CABEÇALHO
-   ========================= */
-
 .cabecalho {
   min-height: 200vh;
   display: flex;
@@ -125,9 +112,6 @@ h1 {
   color: var(--clara);
 }
 
-/* =========================
-   FLIP CARD
-   ========================= */
 
 .flip-container {
   perspective: 1000px;
@@ -168,9 +152,6 @@ h1 {
   animation: fly 5s infinite;
 }
 
-/* =========================
-   SEÇÃO SOBRE
-   ========================= */
 
 .sobre {
   padding: 6rem 2rem;
@@ -196,10 +177,6 @@ h1 {
   text-align: center;
   font-size: 1.2rem;
 }
-
-/* =========================
-   SEÇÃO PROJETOS
-   ========================= */
 
 .projetos-titulo {
   font-size: 3rem;
@@ -269,9 +246,6 @@ h1 {
   cursor: pointer;
 }
 
-/* =========================
-   SEÇÃO CONTATOS
-   ========================= */
 
 .contatos {
   padding: 6rem 2rem;
@@ -309,14 +283,14 @@ h1 {
 .rede-social svg {
   width: 20px;
   height: 20px;
-  fill: var(--clara);
+  fill: #fafafa;
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
-/* =========================
-   BOTÕES
-   ========================= */
+.rede-social:hover {
+  transform: scale(1.2);
+}
 
 .botao-cv {
   margin-top: 2rem;
@@ -343,10 +317,6 @@ h1 {
   transform: scale(1.05);
 }
 
-/* =========================
-   RODAPÉ
-   ========================= */
-
 .rodape {
   background-color: var(--maisEscura);
   padding: 1rem;
@@ -354,9 +324,6 @@ h1 {
   font-size: 1.4rem;
 }
 
-/* =========================
-   ANIMAÇÕES
-   ========================= */
 
 @keyframes fly {
   0% {
@@ -372,14 +339,8 @@ h1 {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - DESKTOP
-   ========================= */
 
 @media (max-width: 1024px) {
-  .formulario-contatos {
-    min-width: 90%;
-  }
 
   .project-card:nth-child(3) {
     grid-column: auto;
@@ -392,18 +353,16 @@ h1 {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - TABLET
-   ========================= */
 
 @media (max-width: 768px) {
   /* Navegação Mobile */
   .menu-burguer {
     display: block;
+    position: fixed;
   }
 
   .menu {
-    position: fixed;
+    position: absolute;
     left: -100%;
     top: 0;
     flex-direction: column;
@@ -415,6 +374,7 @@ h1 {
     transition: 0.3s;
     font-size: 2rem;
     align-items: top;
+    margin-left: 2rem;
   }
 
   .menu.ativo {
@@ -488,9 +448,6 @@ h1 {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - MOBILE
-   ========================= */
 
 @media (max-width: 480px) {
   /* Navegação */
@@ -538,11 +495,6 @@ h1 {
     margin-top: 10px;
   }
 
-  .formulario-contatos {
-    min-width: 100%;
-    padding: 1rem;
-  }
-
   .botao-cv-link {
     padding: 0.8rem 1.5rem;
     font-size: 16px;
@@ -559,9 +511,6 @@ h1 {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - EXTRA SMALL
-   ========================= */
 
 @media (max-width: 320px) {
   .flip-card {
