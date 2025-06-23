@@ -14,6 +14,7 @@
       type="image/x-icon"
     />
     <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
   </head>
 
   <body>
@@ -63,7 +64,7 @@
           </div>
         </div>
       </div>
-      <h1>Davi Quinino</h1>
+      <h1 class="name">Davi Quinino</h1>
       <p class="cabecalho-sub-titulo">Programador & Designer</p>
       <div class="botao-cv">
         <a
@@ -209,6 +210,7 @@
     <script>
       var sheep = new eSheep();
       sheep.Start();
+      PowerGlitch.glitch('.name')
     </script>
   </body>
 </html>

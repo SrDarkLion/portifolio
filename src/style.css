@@ -376,6 +376,11 @@ h1 {
     align-items: top;
     margin-left: 2rem;
   }
+  .menu-link {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
 
   .menu.ativo {
     left: 0;
