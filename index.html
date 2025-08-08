@@ -13,8 +13,13 @@
       href="assets/img/favicon.ico"
       type="image/x-icon"
     />
-    <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
     <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -65,7 +70,7 @@
         </div>
       </div>
       <h1 class="name">Davi Quinino</h1>
-      <p class="cabecalho-sub-titulo">Programador & Designer</p>
+      <p class="cabecalho-sub-titulo">Programador</p>
       <div class="botao-cv">
         <a
           href="https://drive.google.com/file/d/12DHXU9PHUsnApORFy0Jzc0iSH0bsfQjl/view?usp=sharing"
@@ -208,9 +213,7 @@
 
     <script src="src/script.js"></script>
     <script>
-      var sheep = new eSheep();
-      sheep.Start();
-      PowerGlitch.glitch('.name')
+      PowerGlitch.glitch(".name");
     </script>
   </body>
 </html>
