@@ -30,15 +30,8 @@ Bem-vindo ao meu portfólio pessoal! Este site foi criado para mostrar meus proj
 ├── index.html
 ├── style.css
 ├── script.js
-├── img/
-│   ├── davi.png
-│   ├── favicon.ico
-│   └── projetos/
-│       ├── bookeeper/
-│       ├── collectivecomments/
-│       └── sodarfruit/
+├── assets/
 └── sounds/
-    └── rizz-sounds.mp3
 ```
 
 ## 🔗 Links
